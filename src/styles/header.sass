@@ -1,0 +1,111 @@
+@import variables
+
+header
+  max-width: 80%,
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: center,
+  margin: 0 auto,
+  text-align: center,
+  padding-top: 15px,
+
+header > section
+  @media (min-width: 420px)
+    display: flex,
+    justify-content: space-around,
+    align-items: center,
+    gap: 30px,
+    .logo
+      font-size: 3.5em,
+
+.logo
+  font-size: 2.7em,
+
+h1
+  font-size: 2.2em,
+  font-weight: 700,
+  color: black,
+  text-transform: lowercase,
+
+input
+  background-color: white,
+  text-align: center,
+  border-top-left-radius: 7px,
+  border-top-right-radius: 7px,
+  font-family: $fonte2,
+  margin-top: 1em,
+  &::placeholder
+    color: black,
+    text-transform: lowercase,
+    font-family: $fonte2,
+    font-size: .8em,
+
+input
+  height: 3em,
+  width: 200px,
+  padding: 0 10px,
+  @media (min-width: 420px)
+    width: 250px,
+  @media (min-width: 460px)
+    border-top-right-radius: 0px,
+    border-top-left-radius: 7px,
+    border-bottom-left-radius: 7px,
+    width: 170px,
+
+button
+  height: 2.3em,
+  width: 200px,
+  background-color: purple,
+  color: white,
+  text-transform: lowercase,
+  font-weight: 500,
+  font-family: $fonte2,
+  display: flex,
+  justify-content: space-between,
+  padding: 0 20px,
+  align-items: center,
+  cursor: pointer,
+  transition: all 500ms ease,
+  &:hover
+    opacity: .9,
+  &:disabled
+    background-color: #b4b3b3b9,
+    width: 200px,
+  @media (min-width: 420px)
+    width: 250px,
+    &:disabled
+      width: 250px,
+
+  @media (min-width: 460px)
+    width: 150px,
+    height: 3em,
+    justify-content: center,
+    align-items: center,
+    align-content: center,
+    margin-top: 8%,
+    border-top-right-radius: 7px,
+    border-bottom-right-radius: 7px,
+    &:disabled
+      width: 150px,
+
+.add-icon
+  font-weight: bold,
+  font-size: 1.3em,
+  color: white,
+  &:disabled
+    background-color: #d3d3d3,
+
+button, .add-icon
+  &:hover
+    color: white,
+
+form
+  @media (min-width: 460px)
+    display: flex,
+    width: 50%,
+    max-width: 400px,
+    justify-content: center,
+    align-content: center,
+    align-items: center,
+    justify-items: center,

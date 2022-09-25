@@ -1,0 +1,37 @@
+// Importações.
+@import variables
+@import header
+@import list
+
+// Definições.
+*
+  margin: 0,
+  padding: 0,
+  box-sizing: border-box,
+  font-weight: 300,
+
+body, html
+  font-family: $fonte
+  color: $text-color,
+  background-color: $bg-color,
+  width: 100vw,
+  height: 100vh,
+  font-size: .8em,
+  overflow-x: hidden,
+  scroll-behavior: smooth,
+  transition: all 500ms ease,
+  &::-webkit-scrollbar
+    width: 8px,
+  &::-webkit-scrollbar-track
+    background-color: #ff08ca7c,
+  &::-webkit-scrollbar-thumb
+    border-radius: 6px,
+    background-color: purple,
+    height: 5px,
+
+
+
+
+button, input
+  border: none,
+  outline: none,
