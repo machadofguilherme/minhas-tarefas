@@ -6,7 +6,7 @@ import '../styles/list.sass';
 import { removeItem } from '../redux/actions';
 
 function ListItem({item, newlist, list}) {
-  const [done, setDone] = useState('');
+  const [done, setDone] = useState('bg-false');
 
   const delItem = (i) => {
     const newList = list.filter((item) => item !== i);
@@ -14,18 +14,14 @@ function ListItem({item, newlist, list}) {
   }
 
   const itemDone = ({target}) => {
-    const check = target.checked;
     const content = target.textContent;
-
-    if (content === item) {
-      check ? setDone('bg-true') : setDone('');
-    }
+    content === item ? setDone('bg-true') : setDone('bg-false');
   }
 
   return (
-    <label
+    <section
       className={ `list-item ${done}` }
-      htmlFor='done' onClick={itemDone}
+      onClick={itemDone}
     >
       <p>{item}</p>
 
@@ -34,13 +30,7 @@ function ListItem({item, newlist, list}) {
           onClick={() => delItem(item)}
         />
       </i>
-
-      <input
-        type='checkbox'
-        className='hide'
-        id='done'
-      />
-    </label>
+    </section>
   )
 }
 
